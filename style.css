@@ -1,18 +1,61 @@
-*
-
-
-.wrapper {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-size: 16px;
+}
+.container {
+  width: 100%;
+  max-width: 1230px; /*максимальная ширина может иметь другое значение*/
+  padding: 0 15px;
   margin: 0 auto;
-  width: 300px;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header-logo {
+  background-image: url(img/mairala.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  float: left;
+}
+.separator {
+  background-image: url(img/separator.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.servises-blocks {
   display: flex;
+  justify-content: space-between;
 }
-
-
-:root {
-  --size: 100px;
-  --bord: 5px;
+.servises-block {
+  width: 370px;
+  height: 360px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.servises-block img{
+  width: 33px;
+  height: 33px;
+  margin: 30px;
+}
+.skills-items {
+  display: flex;
+  justify-content: space-between;
+}
+.skill-block {
+  margin: 0 30px;
+  width: 170px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+:root { --size: 100px; --bord: 5px;}
 .chart {
   width: var(--size);
   height: var(--size);
@@ -24,13 +67,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 1em;
 }
-
-.x-60 {
-  --value: 60%;
+.x-85 {   --value: 85%;}
+.projects {
+  max-width: 1920px;
 }
-
-.x-20 {
-  --value: 20%;
+.projects-block {
+  width: 25%;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center center;
+  visibility: visible;
+  float: left;
+}
+.active-block {
+  width: 22%;
+  background-color: black;
+  opacity: 0.5;
+  visibility: hidden;
+  z-index: 200;
+}
+.projects-block:hover .active-block {
+visibility: visible;
 }
