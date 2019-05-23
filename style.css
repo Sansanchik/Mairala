@@ -1,0 +1,36 @@
+*
+
+
+.wrapper {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+}
+
+
+:root {
+  --size: 100px;
+  --bord: 5px;
+}
+
+.chart {
+  width: var(--size);
+  height: var(--size);
+  margin: 1em auto;
+  border: var(--bord) solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(white, white) padding-box, conic-gradient(lightseagreen var(--value), lightgrey var(--value)) border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.x-60 {
+  --value: 60%;
+}
+
+.x-20 {
+  --value: 20%;
+}
